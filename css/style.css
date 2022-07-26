@@ -354,8 +354,7 @@ body{
 	position: relative;
 	z-index: 5;
 }
-._container {
-}
+
 
 .article__body{
 	padding:490px 0 59px 0;
@@ -446,6 +445,219 @@ body{
 .comments__link {
 	color:inherit;
 	display: block;
+}
+
+
+
+/* Articles*/
+
+.articles {
+	padding:60px 0 80px 0; 
+}
+.articles__container {
+}
+._container {
+}
+.articles__body {
+
+	display: grid;
+	grid-template-columns: 1fr 270px;
+	column-gap: 130px;
+
+}
+.articles__content {
+
+}
+.content {
+	
+	
+
+}
+
+.content__posts {
+	display:grid;
+	grid-template-columns: 50% 50%;
+	column-gap: 30px;
+	row-gap:30px;
+	
+	/* grid-template-rows:1fr 1fr 1fr 2fr 1fr; */
+	
+}
+.content__post {
+	/* text-align: center; */
+	
+}
+.post {
+
+	box-shadow:0px 4px 4px  rgba(0, 0, 0, 0.25);
+
+	
+}
+
+.post:nth-child(7n){
+/* width: 100%; */
+grid-column:span 2;
+
+}
+
+
+.post__image {
+	width: 100%;
+	
+}
+
+.post__image img{
+	width: 100%;
+	/* max-height: 349px; */
+}
+
+.post__text {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	align-items: center;
+	padding:15px 43px;
+}
+
+
+/* стили category можно использовать повторно для правой колонки  */
+.post__category {
+	margin-bottom: 4px;
+}
+
+.category {
+	font-family: 'PT Sans';
+	color:#C9A96E;
+	font-size:12px;
+	line-height: 129%;
+	text-transform: uppercase;
+
+}
+
+
+
+
+
+
+.post__title {
+	margin-bottom:10px;
+	
+}
+.post__title a{
+	color:#171717;
+}
+
+.title-post {
+	
+	font-size:20px;
+	line-height: 140%;
+	max-width:285px;
+
+	
+}
+
+
+.post__footer{
+	display: flex;
+	font-size:12px;
+	color:#666666;
+	/* justify-content: space-between; */
+	/* max-width: 166px; */
+
+}
+
+/* to switch pages */
+
+.content__pages {
+	
+	max-width: 509px;
+	margin:0 auto;
+
+	margin-top:60px;
+
+}
+.pagination {
+	display: flex;
+	justify-content: space-between;
+	background-color: #fff;
+	border:2px solid #E5E5E5;
+	padding:18px 25px;
+	font-family: 'HK Grotesk', sans-serif;
+	line-height: 114%;
+	text-transform: uppercase;
+
+	
+	
+}
+.pagination__item {
+}
+.pagination__link {
+	color:#171717;
+
+}
+
+.pagination__link:hover{
+	text-decoration: underline;
+}
+
+
+
+._pagintation-theme{
+color:#A2A2A2;
+}
+
+
+.pagination__arrow._right{
+	padding-left:10px;
+	
+}
+
+.pagination__arrow._left{
+	padding-right:10px;
+	
+}
+
+
+.article__date {
+	/* font-size:12px;
+	color:#666666; */
+}
+.date {
+}
+.article__author {
+	margin-left: 12px;
+}
+.author {
+}
+.author__by {
+}
+.author__link {
+}
+.link-author {
+}
+.articles__addition {
+}
+.addition {
+}
+
+
+.articles__about-author {
+}
+.about-author {
+	max-width: 270px;
+}
+.about-author__image {
+}
+.image {
+}
+.about-author__article {
+}
+.about-author__title {
+}
+.category {
+}
+.about-author__text {
 }
 
 
