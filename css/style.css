@@ -788,6 +788,8 @@ color:#A2A2A2;
 }
 
 /* categories */
+
+
 .articles__categories{
 	padding-bottom:70px;
 }
@@ -818,12 +820,110 @@ color:#A2A2A2;
 
 }
 
+.categories__link:hover{
+	text-decoration: underline;
+}
+
 ._link-num{
 
 
 
 }
 
+
+
+/* social__media  */
+
+.social {
+	width: 100%;
+	display: grid;
+	grid-template-areas: 	"social-1 social-2 social-3"
+							"social-4 social-5 social-6"
+							"social-7 social-8 social-9";
+	grid-template-rows:repeat(3,88px);
+	grid-template-columns: repeat(3,88px);
+	row-gap:3px;
+	column-gap:3px;
+	text-align: center;
+	
+}
+.social__item {
+	
+}
+
+.social__link {
+	color:#999999;
+}
+.fa-brands {
+	color: #5A5A5A;
+	font-size: 18px;
+	
+}
+.fa-facebook-f {
+}
+.social__num {
+	margin-top:6px;
+}
+
+div[class*="item-social"]{
+	cursor: pointer;
+	background-color: #F8F9FA;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-weight: 400;
+	font-family: "PT Sans";
+	font-size: 12px;
+	
+	line-height: 129%;
+	transition: all .5s ease-in-out;
+}
+
+div[class*="item-social"]:hover{
+	background-color: #999999;
+	
+	text-decoration: underline;
+	transition: all .5s ease-in-out;
+}
+
+div[class*="item-social"]:hover  .social__link,
+div[class*="item-social"]:hover  .fa-brands{
+	color: #F8F9FA;
+	transition: all .5s ease-in-out;
+	
+}
+
+
+
+
+.item-social-1 {
+	grid-area:social-1;
+}
+.item-social-2 {
+	grid-area:social-2;
+}
+.item-social-3 {
+	grid-area:social-3;
+}
+.item-social-4 {
+	grid-area:social-4;
+}
+.item-social-5 {
+	grid-area:social-5;
+}
+.item-social-6 {
+	grid-area:social-6;
+}
+.item-social-7 {
+	grid-area:social-7;
+}
+.item-social-8 {
+	grid-area:social-8;
+}
+.item-social-9 {
+	grid-area:social-9;
+}
 
 
 /*  Подвал сайта */
