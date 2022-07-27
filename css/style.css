@@ -787,8 +787,42 @@ color:#A2A2A2;
 
 }
 
+/* categories */
+.articles__categories{
+	padding-bottom:70px;
+}
+
+.categories__list {
+}
+.categories__item {
+	display:flex;
+	justify-content: space-between;
+	padding:15px 0;
+	
+}
+
+.categories__item:first-child{
+	padding-top: 15px;
+}
+
+.categories__item:not(:last-child){
+	border-bottom:1px solid #E5E5E5;
+}
 
 
+
+
+.categories__link{
+	color:#666666;
+	font-weight: 400;
+
+}
+
+._link-num{
+
+
+
+}
 
 
 
