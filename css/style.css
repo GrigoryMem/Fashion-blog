@@ -732,6 +732,11 @@ color:#A2A2A2;
 	
 }
 
+
+/* Aside */
+.addition{
+	max-width: 270px;
+}
 /* About author */
 
 
@@ -993,6 +998,30 @@ div[class*="item-social"]:hover  .fa-brands{
 
 
 /* aside tags */
+.articles__tags{
+	
+	margin-top:70px;
+}
+
+
+.tags{
+
+	display:flex;
+	
+	flex-wrap: wrap;
+	column-gap:10px;
+	row-gap: 10px;
+}
+
+
+.tags__item{
+	color:#666666;
+	background-color: #E5E5E5;
+	padding:6px 15px;
+	font-weight: 400;
+
+}
+
 
 
 
