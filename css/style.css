@@ -464,9 +464,9 @@ body{
 ._container {
 }
 .articles__body {
-
+	/* 0.35fr */
 	display: grid;
-	grid-template-columns: 1fr 270px;
+	grid-template-columns: 1fr 0.35fr;
 	column-gap: 130px;
 
 }
@@ -481,7 +481,7 @@ body{
 
 .content__posts {
 	display:grid;
-	grid-template-columns: 50% 50%;
+	grid-template-columns: 1fr 1fr;
 	column-gap: 30px;
 	
 	
@@ -490,6 +490,8 @@ body{
 	margin-bottom: 30px;
 	
 }
+
+
 .post,._post-shadow{
 
 	box-shadow:0px 4px 4px  rgba(0, 0, 0, 0.25);
@@ -590,11 +592,13 @@ grid-column:span 2;
 /* to switch pages */
 
 .content__pages {
+	display: flex;
 	
-	max-width: 509px;
-	margin:0 auto;
-
+	justify-content: center;
+	align-items: center;
+	
 	margin-top:60px;
+	
 
 }
 .pagination {
@@ -602,7 +606,7 @@ grid-column:span 2;
 	justify-content: space-between;
 	background-color: #fff;
 	border:2px solid #E5E5E5;
-	padding:18px 25px;
+	/* padding:0px 25px; */
 	font-family: 'HK Grotesk', sans-serif;
 	line-height: 114%;
 	text-transform: uppercase;
@@ -611,15 +615,63 @@ grid-column:span 2;
 	
 }
 .pagination__item {
-}
-.pagination__link {
-	color:#171717;
+
+	/* display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center; */
+	
 
 }
+
+.pagination__link{
+	color:#171717;
+	height: 50px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.pagination__link:not(._button) {
+	
+	width: 50px;
+	height: 50px;
+
+}
+
+
+.pagination__link._button{
+	display: flex;
+	
+	flex-direction: row;
+	
+}
+
+
+
+
+
+
+
+
+
+
 
 .pagination__link:hover{
 	text-decoration: underline;
+	background-color:#A2A2A2;
+	
+	color:#fff;
+	font-weight: 600;
+	letter-spacing: 0.2px;
+	background-color: #B1B1B1;
+	box-shadow:3px 3px 4px  rgba(0, 0, 0, 0.25);
+	transition: all .3s ease-in-out;
 }
+
+
+
+
 
 
 
@@ -628,14 +680,27 @@ color:#A2A2A2;
 }
 
 
-.pagination__arrow._right{
-	padding-left:10px;
-	
-}
+
+
 
 .pagination__arrow._left{
-	padding-right:10px;
-	
+	color:#A2A2A2;
+}
+.pagination__text:not(.old){
+	padding-right:25px;
+	padding-left:10px;
+}
+
+.pagination__text.old{
+	color:#A2A2A2;
+	padding-left:25px;
+	padding-right:10px
+}
+
+.pagination__link:hover .pagination__text.old,
+.pagination__link:hover .pagination__arrow._left{
+	color:#fff;
+	transition: all .2s ease-in-out;
 }
 
 
@@ -667,7 +732,7 @@ color:#A2A2A2;
 	
 }
 
-
+/* About author */
 
 
 .article__date {
@@ -924,6 +989,11 @@ div[class*="item-social"]:hover  .fa-brands{
 .item-social-9 {
 	grid-area:social-9;
 }
+
+
+
+/* aside tags */
+
 
 
 /*  Подвал сайта */
