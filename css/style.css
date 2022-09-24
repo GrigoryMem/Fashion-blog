@@ -165,19 +165,32 @@ body{
 
 @media(max-width:990px){
 	.nav{
-		display: none;
+		/* display: none; */
+		position: fixed;
+		top:0;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		background-color:rgba(128, 128, 128, 0.25);
+		padding:90px 15px 30px 15px;
+		transition: all 0.3s ease 0s;
+	}
+
+	.header:target .nav{
+		left:0;
+		transition: all 0.3s ease 0s;
 	}
 }
-.burger{
+.burger__menu{
 	display: none;
 	cursor: pointer;
 }
 
-@media(max-width:990px){
-	.burger{
-		display: block;
-	}
+.menu{
+	display:none;
 }
+
+
 .nav__burger{
 	width: 40px;
 	position: relative;
@@ -186,7 +199,7 @@ body{
 
 .menu{
 	position: relative;
-	display: block;
+	display: none;
 	width:45px;
 	font-size: none;
 	color:transparent;
@@ -195,6 +208,13 @@ body{
 	border-radius: 5px;
 	height: 5px;
 	
+}
+
+@media(max-width:990px){
+	.menu{
+		display: flex;
+	
+	}
 }
 .menu::after,
 .menu::before{
@@ -225,30 +245,97 @@ body{
 }	
 
 
+/*Close burger*/
+
+.burger__close{
+	display:none;
+	color:transparent;
+	font-size:none;
+	position: relative;
+
+}
+
+.burger__close::before,
+.burger__close::after{
+	content:"";
+	height: 5px;
+	border-radius: 5px;
+	background-color: #171717;
+	width: 100%;
+	z-index: 100;
+	position: absolute;
+	top:50%;
+	left:0;
+	/* transform-origin: 0 0; */
+}
+
+.burger__close::before{
+	transform:rotate(45deg);
+
+}
+
+.burger__close::after{
+	transform:rotate(-45deg);
+}
+
+
+
+.header:target .burger__menu{
+	display: none;
+}
+
+.header:target .burger__close{
+	display: block;
+}
 
 
 
 
+
+/*Nav*/
 
 .nav__list {
 	display: flex;
 	flex-wrap:wrap;
+}
+
+
+@media(max-width:990px){
+	.nav__list{
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		
+	}
+
 }
 .nav__item {
 	font-size: 14px;
 	
 }
 
-@media(max-width:580px){
-	.nav__item{
-		font-size: 18px;
-	}
-}
+
+
 
 
 .nav__item:not(:last-child){
 	margin-right: 34px;
 	
+}
+
+@media(max-width:990px){
+	.nav__item{
+		font-size: 30px;
+		align-self: center;
+		margin:0;
+		margin-bottom: 20px;
+
+	}
+
+	.nav__item:not(:last-child){
+		margin-right: 0;
+		
+	}
 }
 .nav__link {
 	line-height: calc(18.55/14*100%);
@@ -262,6 +349,12 @@ body{
 
 ._active-link{
 	color:#C9A96E;
+}
+
+@media(max-width:990px){
+	._active-link{
+		color:#f7a206;
+	}
 }
 
 
@@ -1235,6 +1328,12 @@ div[class*="item-social"]:hover  .fa-brands{
 	align-items: center;
 	padding-bottom:30px;
 }
+
+.footer:target{
+	transition: all .5s linear;
+}
+
+
 .footer__instagram {
 	
 
